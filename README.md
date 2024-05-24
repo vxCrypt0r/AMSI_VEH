@@ -25,7 +25,7 @@ For demonstration purposes, this repository contains a very basic DLL injector. 
 ____
 ### Demo:
 
-![](https://github.com/vxCrypt0r/AMSI_VEH/blob/main/poc.gif)
+![](https://github.com/vxCrypt0r/AMSI_VEH/blob/master/poc.gif)
 
 ________
 
