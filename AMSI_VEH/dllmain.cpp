@@ -86,7 +86,7 @@ LONG VehAmsiScanBuffer(_EXCEPTION_POINTERS* ExceptionInfo)
         //AmsiScanBuffer hardware breakpoint will trigger at the first ASM instruction when the function is called.
         DWORD64 retAddr = *(PDWORD64)ExceptionInfo->ContextRecord->Rsp;  // *Rsp is the RETURN ADDRESS 
         ExceptionInfo->ContextRecord->Rip = retAddr;                     // Set Rip to point to the return address (make it exit the function) 
-        ExceptionInfo->ContextRecord->Rax = AMSI_RESULT_CLEAN;           // Set Rax (function return address) to AMSI_RESULT_CLEAN
+        ExceptionInfo->ContextRecord->Rax = AMSI_RESULT_CLEAN;           // Set Rax (function result) to AMSI_RESULT_CLEAN
         //Resume thread execution with the updated registers
         return EXCEPTION_CONTINUE_EXECUTION;
     }
